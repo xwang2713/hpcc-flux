@@ -1,0 +1,17 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: hpcc-efs
+  namespace: default
+spec:
+  releaseName: efsstorage
+  chart:
+    repository: https://github.com/hpcc-systems/helm-chart
+    ref: master
+    version: 0.1.0
+    path; helm/examples/efs/hpcc-efs
+  values:
+    efs:
+      namespace: default
+      region: us-east-1 
+      id: 
