@@ -1,0 +1,12 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flux
+spec:
+  template:
+    spec:
+      containers:
+      - name: flux
+        args:
+        - --sync-garbage-collection

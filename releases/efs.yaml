@@ -6,12 +6,14 @@ metadata:
 spec:
   releaseName: efsstorage
   chart:
-    repository: https://github.com/hpcc-systems/helm-chart
+    git: https://github.com/hpcc-systems/helm-chart
     ref: master
     version: 0.1.0
-    path; helm/examples/efs/hpcc-efs
+    path: helm/examples/efs/hpcc-efs
+    #secretRef:  # not required for public repo
+    #  name: git-https-credentials
   values:
     efs:
       namespace: default
       region: us-east-1 
-      id: 
+      id: fs-739f91f3
